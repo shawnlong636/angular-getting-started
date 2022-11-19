@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Product, products } from '../products';
+import { Component } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
+import { Product, products } from '../products'
 
 @Component({
   selector: 'app-product-details',
@@ -8,16 +8,16 @@ import { Product, products } from '../products';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent {
-  product: Product | undefined;
+  product: Product | undefined
 
-  constructor(private route: ActivatedRoute) {
+  constructor (private readonly route: ActivatedRoute) {}
 
-  }
+  ngOnInit (): void {
+    const routeParams = this.route.snapshot.paramMap
+    const productIdFromRoute = Number(routeParams.get('productId'))
 
-  ngOnInit() {
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
-    
-    this.product = products.find(product => product.id === productIdFromRoute);
+    this.product = products.find(
+      (product) => product.id === productIdFromRoute
+    )
   }
 }

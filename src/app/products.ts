@@ -1,8 +1,8 @@
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
+  id: number
+  name: string
+  price: number
+  description: string
 }
 
 export const products: Product[] = [
@@ -24,4 +24,4 @@ export const products: Product[] = [
     price: 299,
     description: ''
   }
-];
+]
