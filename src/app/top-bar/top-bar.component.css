@@ -1,0 +1,18 @@
+#button-cluster {
+  display: flex;
+  gap: 10px;
+}
+
+#github-button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#github-button svg {
+  width: 35px;
+  height: 35px;
+}
+#github-button path {
+  fill: white;
+}
