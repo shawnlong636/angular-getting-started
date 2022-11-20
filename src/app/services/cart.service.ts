@@ -32,6 +32,6 @@ export class CartService {
   }
 
   getShippingPrices (): Observable<shippingPrice[]> {
-    return this.http.get<shippingPrice[]>('/assets/shipping.json')
+    return this.http.get<shippingPrice[]>('../../assets/shipping.json')
   }
 }
