@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/angular-getting-started",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -93,7 +93,13 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options":{
+            "baseHref": "https://shawnlong636.github.io/angular-getting-started/",
+            "repo": "https://github.com/shawnlong636/angular-getting-started",
+            "name": "shawnlong636",
+            "email": "shawnlong636@gmail.com"
+          }
         }
       }
     }
