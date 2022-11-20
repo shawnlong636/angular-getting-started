@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'
 import { Product } from '../products'
 import { Observable } from 'rxjs'
 
-interface shippingPrice {
+export interface shippingPrice {
   type: string
   price: number
 }
